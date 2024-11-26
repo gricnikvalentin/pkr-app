@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Sebastijan",
+    "tableNumber": 1
+  },
+  {
+    "id": 2,
+    "name": "Valentin",
+    "tableNumber": 1
+  },
+  {
+    "id": 3,
+    "name": "Gospod vpisan preko telefona",
+    "tableNumber": 2
+  }
+]
