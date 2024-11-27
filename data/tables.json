@@ -1,7 +1,22 @@
 [
-    { "id": 1, "name": "Texas Hold'em 5/10", "seats": 9 },
-    { "id": 2, "name": "Omaha 2/5", "seats": 9 },
-    { "id": 3, "name": "Razz", "seats": 9 },
-    { "id": 4, "name": "Draw Poker", "seats": 5 }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Dealer's choice 2/5",
+    "seats": 9
+  },
+  {
+    "id": 2,
+    "name": "Texas Hold'em 2/5",
+    "seats": 9
+  },
+  {
+    "id": 3,
+    "name": "Spremenjeno ime 1",
+    "seats": 9
+  },
+  {
+    "id": 4,
+    "name": "Ultimate Poker",
+    "seats": 5
+  }
+]

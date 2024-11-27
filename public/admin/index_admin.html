@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokerHouse Maribor</title>
-    <script src="app.js" defer></script>
+    <script src="../app_admin.js" defer></script>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -12,10 +12,11 @@
         padding: 0;
         color: white;
         background-color: black;
-        background-image: url("./background.png"); /* Replace with your PNG image */
+        background-image: url("../background.png"); /* Replace with your PNG image */
         background-attachment: fixed;
         background-size: 100% 100%;
       }
+
       header {
         background-color: #222;
         color: white;
@@ -42,7 +43,6 @@
         justify-content: space-between;
         gap: 12px;
         padding: 10px;
-        margin-bottom: 50px;
 
       }
       .table {
@@ -51,7 +51,7 @@
         border-radius: 8px;
         padding: 15px;
         width: 22%;
-        box-shadow: 0 2px 4px rgba(170, 12, 12, 0.5);
+        box-shadow: 0 2px 4px rgba(85, 61, 61, 0.9);
       }
       .table h1 {
         text-align: center;
@@ -60,27 +60,29 @@
       .seats {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 15px;
       }
       .seat {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         background-color: #333;
-        justify-content: center;
         height: 50px;
-        width: 90%;
+        text-align: center;
         box-shadow: 0 1px 3px rgba(235, 0, 0, 0.9);
         align-items: center;
-      }
-      .seat-num{
-        margin-right: 15px;
       }
       .seat span {
         font-size: 18px;
         margin-left: 15px;
       }
+
+      .line-div {
+        height: 0px;
+      }
+
       .seat button {
+        margin-top: 10px;
         font-size: 20px;
       }
       .seat h3 {
@@ -88,7 +90,8 @@
         margin-bottom: 10px;
       }
       .seat h2 {
-        margin-top: 0;
+        margin-top: 15px;
+        margin-bottom: 10px;
       }
       .seat button {
         display: block;
@@ -100,6 +103,7 @@
         border: none;
         border-radius: 4px;
         transition: background-color 0.3s;
+        border: 1px solid black;
       }
       .seat:hover button {
         background-color: #666;
@@ -116,7 +120,7 @@
     </style>
   </head>
   <body>
-    <header>PokerHouse Maribor</header>
+    <header>PokerHouse Maribor ADMIN</header>
     <div class="tables-container" id="tablesContainer"></div>
     <footer>All rights reserved</footer>
   </body>

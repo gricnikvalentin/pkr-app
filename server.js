@@ -6,7 +6,9 @@ const http = require ('http');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
+app.get('/admin' ,(req,res)=>{
+    res.sendFile(path.join(__dirname, 'public/admin/index_admin.html'));
+})
 
 // Middleware
 app.use(bodyParser.json());

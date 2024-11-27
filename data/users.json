@@ -1,52 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Sebastijan",
-    "tableNumber": 1
-  },
-  {
-    "id": 3,
-    "name": "Gospod vpisan preko telefona",
-    "tableNumber": 2
-  },
-  {
-    "id": 4,
-    "name": "Miha",
-    "tableNumber": 3
-  },
-  {
-    "id": 5,
-    "name": "Pravi kavalir 2",
-    "tableNumber": 4
-  },
-  {
-    "id": 6,
-    "name": "radenska",
-    "tableNumber": 4
-  },
-  {
-    "id": 7,
-    "name": "tri prste tekile",
-    "tableNumber": 4
-  },
-  {
-    "id": 8,
-    "name": "igralec 3",
-    "tableNumber": 1
-  },
-  {
-    "id": 9,
-    "name": "igralec 4",
-    "tableNumber": 1
-  },
-  {
-    "id": 10,
-    "name": "Miha",
-    "tableNumber": 4
-  },
-  {
-    "id": 11,
-    "name": "igralec 5",
-    "tableNumber": 4
+    "name": "lolxD",
+    "tableNumber": 1,
+    "seatNumber": 1
   }
 ]
