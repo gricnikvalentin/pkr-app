@@ -4,7 +4,7 @@ const fs = require('fs');
 const cors = require('cors');
 const path = require ('path')
 const app = express();
-const PORT = 3005;
+const PORT = 3000;
 
 // Middleware
 app.use(bodyParser.json());
