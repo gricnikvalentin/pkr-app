@@ -1,8 +1,8 @@
-//const apiUrlUsers = 'http://localhost:3005/api/users';
-//const apiUrlTables = 'http://localhost:3005/api/tables';
+const apiUrlUsers = 'http://localhost:3000/api/users';
+const apiUrlTables = 'http://localhost:3000/api/tables';
 
-const apiUrlUsers = 'https://pokerhouse-checkin.onrender.com/api/users';
-const apiUrlTables = 'https://pokerhouse-checkin.onrender.com/api/tables';
+//const apiUrlUsers = 'https://pokerhouse-checkin.onrender.com/api/users';
+//const apiUrlTables = 'https://pokerhouse-checkin.onrender.com/api/tables';
 
 document.addEventListener('DOMContentLoaded', () => {
     const tablesContainer = document.getElementById('tablesContainer');
