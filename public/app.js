@@ -1,5 +1,5 @@
-const apiUrl = 'http://localhost:3000/api/users';
-const apiUrlTables = 'http://localhost:3000/api/tables';
+const apiUrl = 'https://pokerhouse-checkin.onrender.com/api/users';
+const apiUrlTables = 'https://pokerhouse-checkin.onrender.com/api/tables';
 document.addEventListener('DOMContentLoaded', () => {
     const tableCapacities = { 1: 9, 2: 9, 3: 9, 4: 5 }; // Max seats per table
     const tablesContainer = document.getElementById('tablesContainer');
