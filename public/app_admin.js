@@ -3,8 +3,8 @@
 const apiUrlUsers = 'https://pokerhouse-checkin.onrender.com/api/users';
 const apiUrlTables = 'https://pokerhouse-checkin.onrender.com/api/tables';
 
-//const apiUrlUsers = 'http://localhost:3005/api/users';
-//const apiUrlTables = 'http://localhost:3005/api/tables';
+//const apiUrlUsers = 'http://localhost:3000/api/users';
+//const apiUrlTables = 'http://localhost:3000/api/tables';
 
 document.addEventListener('DOMContentLoaded', () => {
     const tablesContainer = document.getElementById('tablesContainer');
@@ -61,9 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const generateSeats = (table, users) => {
         const seatsHTML = [];
+        seatsHTML.push(`<button onclick="editTableSeats(${table.id})">Spremeni število sedežev</button>`);
         const tableUsers = users.filter(user => user.tableNumber === table.id);
 
-        for (let i = 1; i <= (table.id === 4 ? 5 : 9); i++) {
+        for (let i = 1; i <= table.seats; i++) {
             const user = tableUsers.find(user => user.seatNumber === i);
             seatsHTML.push(`
                 <div class="seat">
@@ -74,8 +75,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `);
         }
-        return seatsHTML.join('');
+        return seatsHTML.join('') + "";
     };
+
+
+
+    window.editTableSeats = async (tableId) => {
+        const newSeatCount = prompt(`Vnesi število sedežev za mizo ${tableId}:`);
+    
+        if (!newSeatCount || isNaN(newSeatCount) || parseInt(newSeatCount) <= 0) {
+            return alert('Vnesi številko');
+        }
+    
+        try {
+            const response = await fetch(`${apiUrlTables}/${tableId}/seats`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ seats: parseInt(newSeatCount) }),
+            });
+    
+            if (response.ok) {
+                alert(`Število sedežev pri mizi ${tableId} je bilo spremenjeno na ${newSeatCount}.`);
+                fetchTables(); // Refresh the table data
+            } else {
+                const errorData = await response.json();
+                alert(`Nekaj je šlo narobe: ${errorData.message}`);
+            }
+        } catch (error) {
+            console.error('Nekaj je šlo narobe:', error);
+        }
+    };
+
 
     // Sit at a specific seat
     window.sitAtSeat = async (tableNumber, seatNumber) => {

@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const seatsHTML = [];
         const tableUsers = users.filter(user => user.tableNumber === table.id);
 
-        for (let i = 1; i <= (table.id === 4 ? 5 : 9); i++) {
+        for (let i = 1; i <= table.seats; i++) {
             const user = tableUsers.find(user => user.seatNumber === i);
             seatsHTML.push(`
                 <div class="seat">
@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return seatsHTML.join('');
     };
+
+
 
     // Sit at a specific seat
     window.sitAtSeat = async (tableNumber, seatNumber) => {

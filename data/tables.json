@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "name": "Dealer's choice 2/5",
+    "name": "Dealer's choice 2/5 Min.: 200",
     "seats": 9
   },
   {
     "id": 2,
-    "name": "Texas Hold'em 2/5",
+    "name": "Texas Hold'em 1/3 Min.: 100",
     "seats": 9
   },
   {
     "id": 3,
-    "name": "Omaha 2/5",
+    "name": "Omaha - Texas Hold'em 2/5         Min.: 200",
     "seats": 9
   },
   {

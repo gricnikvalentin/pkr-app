@@ -35,6 +35,28 @@ const writeData = (file, data) => {
     fs.writeFileSync(file, JSON.stringify(data, null, 2));
 };
 
+app.put('/api/tables/:id/seats', (req, res) => {
+    const { id } = req.params;
+    const { seats } = req.body;
+
+    if (!seats || isNaN(seats) || parseInt(seats) <= 0) {
+        return res.status(400).json({ message: 'Invalid number of seats provided.' });
+    }
+
+    const tables = readData(TABLES_FILE);
+    const tableIndex = tables.findIndex(table => table.id === parseInt(id));
+
+    if (tableIndex === -1) {
+        return res.status(404).json({ message: 'Table not found.' });
+    }
+
+    // Update the seats property
+    tables[tableIndex].seats = parseInt(seats);
+
+    // Save the updated data back to the file
+    writeData(TABLES_FILE, tables);
+    res.json({ message: 'Table seats updated successfully.', table: tables[tableIndex] });
+});
 
 
 
